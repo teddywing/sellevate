@@ -2,3 +2,7 @@
 *.bak
 *.swo
 *.swp
+
+# Bundler
+.bundle/
+vendor/
