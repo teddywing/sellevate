@@ -29,4 +29,11 @@ class App < Sinatra::Base
   get '/auth-callback' do
     erb :auth_callback
   end
+  
+  get '/initialise-labels' do
+    contextio = FancyBear::ContextIO::Label.new('sellevate.hack@gmail.com')
+    contextio.create_defaults
+    
+    redirect to('/')
+  end
 end
