@@ -18,7 +18,8 @@ module FancyBear
             :from_address => m.from['email'],
             :from_name => m.from['name'],
             :subject => m.subject,
-            :timestamp => m.date
+            :timestamp => m.date,
+            :labels => m.folders
           }
         end
         messages
