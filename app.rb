@@ -42,4 +42,9 @@ class App < Sinatra::Base
     contextio = FancyBear::ContextIO::Message.new('sellevate.hack@gmail.com')
     json contextio.all
   end
+  
+  get '/messages/:id.json' do
+    contextio = FancyBear::ContextIO::Message.new('sellevate.hack@gmail.com')
+    json contextio.get(params[:id])
+  end
 end
