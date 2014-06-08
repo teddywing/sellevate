@@ -1,5 +1,5 @@
-require './contextio/config'
-require './contextio/auth'
+require_relative 'contextio/config'
+require_relative 'contextio/auth'
 
 module FancyBear
   module ContextIO
