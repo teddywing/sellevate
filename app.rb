@@ -21,7 +21,7 @@ class App < Sinatra::Base
   get '/auth-begin' do
     contextio = FancyBear::ContextIO::Auth.new
     
-    redirect_url = contextio.connect("#{request['REQUEST_URI']}/auth-callback")
+    redirect_url = contextio.connect("#{request['REQUEST_URI']}auth-callback")
     
     redirect to(redirect_url)
   end
