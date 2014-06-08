@@ -3,4 +3,5 @@ require './contextio'
 module Sellevate
 end
 
-puts Sellevate::ContextIO::API_KEY
+contextio = Sellevate::ContextIO::Auth.new
+puts contextio.authenticate('sellevate.hack@gmail.com')
