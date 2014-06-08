@@ -1,6 +1,6 @@
 require 'contextio'
 
-module Sellevate
+module FancyBear
   module ContextIO
     
     class Auth

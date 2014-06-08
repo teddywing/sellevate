@@ -1,7 +1,7 @@
 require './contextio/config'
 require './contextio/auth'
 
-module Sellevate
+module FancyBear
   module ContextIO
   end
 end

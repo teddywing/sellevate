@@ -1,7 +1,7 @@
 require './contextio'
 
-module Sellevate
+module FancyBear
 end
 
-contextio = Sellevate::ContextIO::Auth.new
+contextio = FancyBear::ContextIO::Auth.new
 puts contextio.authenticate('sellevate.hack@gmail.com')
