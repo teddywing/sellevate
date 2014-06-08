@@ -25,8 +25,23 @@ module FancyBear
         messages
       end
       
-      def get
+      def get(id)
+        output = {}
+        message = @account.messages.where(:message_id => id).first
         
+        output['from_address'] = message.from['email']
+        output['from_name'] = message.from['name']
+        output['subject'] = message.subject
+        output['timestamp'] = message.date
+        output['labels'] = message.folders
+        
+        message.body_parts.each do |p|
+          if p.content
+            output['html'] = p.html?
+            output['content'] = p.content
+          end
+        end
+        output
       end
     end
     
