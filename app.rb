@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/json'
 require './fancy_bear/fancy_bear'
 
 class App < Sinatra::Base
@@ -35,5 +36,10 @@ class App < Sinatra::Base
     contextio.create_defaults
     
     redirect to('/')
+  end
+  
+  get '/messages.json' do
+    contextio = FancyBear::ContextIO::Message.new('sellevate.hack@gmail.com')
+    json contextio.all
   end
 end
