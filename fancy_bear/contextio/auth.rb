@@ -8,9 +8,9 @@ module FancyBear
         @contextio = ::ContextIO.new(API_KEY, API_SECRET)
       end
       
-      def authenticate(email)
-        connection_token = @contextio.connect_tokens.create('http://google.com')
-        connect_tokens.browser_redirect_url
+      def connect(callback_url)
+        connection_token = @contextio.connect_tokens.create(callback_url)
+        connection_token.browser_redirect_url
       end
     end
     
